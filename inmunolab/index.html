@@ -112,6 +112,37 @@ body{font-size:17px;line-height:1.68}
 }
 @media(max-width:360px){.tabs button{font-size:12px;padding:12px 1px}}
 
+
+/* Portada: creadores y directorio en lugar del selector duplicado */
+.team-directory-section{padding-top:58px;padding-bottom:72px;scroll-margin-top:115px}
+.team-section-heading{max-width:850px;margin:0 0 24px}
+.team-section-heading h2{font-size:clamp(29px,3.5vw,40px);margin:8px 0 12px}
+.team-section-heading p{font-size:17px;line-height:1.7;color:#5a7584;margin:0;max-width:800px}
+.creator-panel{border-radius:25px;padding:29px 30px 25px;background:linear-gradient(118deg,#0b3043 0%,#104555 75%,#0e384b 100%);border:1px solid #1c6873;box-shadow:0 18px 43px #0a31411b;color:#fff}
+.creator-panel-top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:22px}
+.creator-label{font-size:13px;letter-spacing:1.5px;color:#89f5de;font-weight:900}
+.creator-pill{border:1px solid #437480;background:#ffffff0c;color:#e6f8f6;border-radius:999px;padding:8px 13px;font-size:13px;font-weight:800}
+.creator-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+.creator-person{min-width:0;display:flex;align-items:center;gap:12px;padding:17px 15px;border:1px solid #487783;background:#ffffff10;border-radius:16px}
+.creator-avatar{display:grid;place-items:center;flex:0 0 47px;width:47px;height:47px;border-radius:14px;background:#14c6b2;color:#063446;font:900 17px Outfit,system-ui,sans-serif}
+.creator-person strong{display:block;font:800 17px/1.35 Outfit,system-ui,sans-serif;color:#fff;overflow-wrap:anywhere}
+.creator-person small{display:block;font-size:13px;line-height:1.4;color:#c3e0e4;margin-top:4px}
+.creator-footnote{font-size:14px;line-height:1.65;color:#c5dfe4;margin:20px 0 0}
+.directory-panel{display:grid;grid-template-columns:90px minmax(0,1fr);gap:20px;margin-top:22px;border-radius:25px;padding:30px;background:#fff;border:1px solid #d7e9ec;box-shadow:0 16px 35px #0b364511}
+.directory-mark{display:grid;place-items:center;width:80px;height:80px;border-radius:22px;background:#e4f8f3;color:#069989;font:900 40px Outfit,system-ui,sans-serif}
+.directory-info{min-width:0}
+.directory-kicker{font-size:13px;letter-spacing:1.3px;font-weight:900;color:#087f74;margin-bottom:6px}
+.directory-info h2{font-size:clamp(25px,2.7vw,35px);margin:0 0 10px}
+.directory-info>p{color:#567483;font-size:16px;line-height:1.7;max-width:870px}
+.directory-buttons{display:flex;flex-wrap:wrap;gap:11px;margin:17px 0 12px}
+.directory-button{display:inline-flex;align-items:center;justify-content:space-between;gap:14px;text-decoration:none;border-radius:13px;font-weight:900;font-size:15px;min-height:52px;padding:13px 17px;transition:transform .18s ease,box-shadow .18s ease}
+.directory-button:hover{transform:translateY(-2px);box-shadow:0 9px 22px #0b38441b}
+.directory-button.primary{background:#0db8a8;color:#073446}
+.directory-button.secondary{background:#eaf6f4;border:1px solid #cce8e3;color:#087a72}
+.directory-info .directory-small{font-size:13px;line-height:1.55;color:#637d89;margin:13px 0 0}
+.team-directory-section .home-trust{margin-top:24px}
+@media(max-width:990px){.creator-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.directory-panel{grid-template-columns:68px minmax(0,1fr)}.directory-mark{width:66px;height:66px}}
+@media(max-width:600px){.team-directory-section{padding-top:40px;padding-bottom:48px}.team-section-heading p{font-size:16px}.creator-panel{padding:23px 19px}.creator-panel-top{align-items:flex-start;flex-direction:column;gap:9px}.creator-grid{grid-template-columns:1fr;gap:10px}.creator-person{padding:12px}.creator-footnote{font-size:13px}.directory-panel{grid-template-columns:1fr;padding:22px 19px;gap:13px}.directory-mark{width:57px;height:57px;font-size:30px;border-radius:17px}.directory-buttons{flex-direction:column}.directory-button{width:100%;font-size:14px}.directory-info>p{font-size:15px}}
 </style>
 </head>
 <body>
@@ -123,7 +154,7 @@ body{font-size:17px;line-height:1.68}
       <div class="welcome-copy"><div class="welcome-overline"><span class="live-dot"></span> INMUNOLOGÍA PARA TODOS · 2026</div>
         <h1>Cuando las defensas<br><em>necesitan ayuda.</em></h1>
         <p>Conoce los <strong>errores innatos de la inmunidad</strong> (antes llamados inmunodeficiencias primarias): qué son, cómo reconocer posibles señales y por qué el diagnóstico oportuno importa.</p>
-        <div class="actions"><button class="btn btn-teal" data-scroll-home="conceptos">Conoce lo esencial <span aria-hidden="true">↓</span></button><button class="btn btn-outline-light" data-scroll-home="elige-tu-ruta">Elegir mi perfil <span aria-hidden="true">↗</span></button></div>
+        <div class="actions"><button class="btn btn-teal" data-scroll-home="conceptos">Conoce lo esencial <span aria-hidden="true">↓</span></button><button class="btn btn-outline-light" data-scroll-home="creadores">Conoce al equipo <span aria-hidden="true">↗</span></button></div>
         <div class="welcome-proof"><span>✓ Ciencia explicada con claridad</span><span>✓ Información orientativa</span><span>✓ Recursos para México</span></div>
       </div>
       <div class="immunity-showcase" aria-hidden="true">
@@ -158,14 +189,40 @@ body{font-size:17px;line-height:1.68}
     <div class="route-steps" aria-label="Del reconocimiento al acompañamiento"><div class="route-step"><span>01</span><div><strong>Reconocer</strong><small>Historia y señales de alerta</small></div></div><i aria-hidden="true">→</i><div class="route-step"><span>02</span><div><strong>Investigar</strong><small>Evaluación clínica y laboratorio</small></div></div><i aria-hidden="true">→</i><div class="route-step"><span>03</span><div><strong>Acompañar</strong><small>Orientación y seguimiento individualizado</small></div></div></div>
     <p class="home-bibliography">Contenido general adaptado de <a href="https://primaryimmune.org/understanding-primary-immunodeficiency/what-is-pi" target="_blank" rel="noopener noreferrer">Immune Deficiency Foundation</a>, <a href="https://www.info4pi.org/" target="_blank" rel="noopener noreferrer">Jeffrey Modell Foundation</a> y <a href="https://fumeni.org.mx/" target="_blank" rel="noopener noreferrer">FUMENI</a>. Esta plataforma es educativa e independiente; no sustituye la consulta médica.</p>
   </div>
-  <div class="wrap audience-section" id="elige-tu-ruta">
-     <div class="audience-heading"><div><div class="eyebrow-new">AHORA ELIGE TU RECORRIDO</div><h2>¿Cómo vas a utilizar INMUNO•LAB?</h2><p>La misma información, con herramientas y lenguaje adaptados a lo que necesitas.</p></div><span class="audience-indicator">3 rutas disponibles</span></div>
-     <div class="audience-grid">
-       <button class="audience-card audience-student" data-nav="estudiantes"><span class="audience-symbol">🎓</span><span class="audience-number">01 / APRENDER</span><strong>Estudiantes</strong><span class="audience-description">Mecanismos, esquemas, casos clínicos y preguntas para practicar.</span><span class="audience-link">Entrar al aula <span>↗</span></span></button>
-       <button class="audience-card audience-doctor" data-nav="medicos"><span class="audience-symbol">🩺</span><span class="audience-number">02 / RAZONAR</span><strong>Médicos</strong><span class="audience-description">Fenotipos, sospecha clínica, laboratorio inicial y referencia.</span><span class="audience-link">Abrir área clínica <span>↗</span></span></button>
-       <button class="audience-card audience-family" data-nav="familias"><span class="audience-symbol">💜</span><span class="audience-number">03 / COMPRENDER</span><strong>Pacientes y familias</strong><span class="audience-description">Explicaciones sencillas y orientación para preparar su consulta.</span><span class="audience-link">Encontrar orientación <span>↗</span></span></button>
-     </div>
-     <div class="home-trust"><div class="trust-mark">✦</div><div><strong>Rigor científico explicado con claridad.</strong><p>Proyecto educativo independiente, elaborado a partir de fuentes médicas y materiales de organizaciones dedicadas a los errores innatos de la inmunidad. Sin afiliación oficial.</p></div><button class="plain-arrow" data-nav="recursos">Ver fuentes ↗</button></div>
+
+  <div class="wrap team-directory-section" id="creadores">
+    <div class="team-section-heading">
+      <div class="eyebrow-new">EL EQUIPO QUE LO HIZO POSIBLE</div>
+      <h2>Las personas detrás de INMUNO•LAB</h2>
+      <p>Una plataforma creada por estudiantes de Medicina para acercar la inmunología a quienes estudian, atienden y viven con estas condiciones.</p>
+    </div>
+    <div class="creator-panel" aria-label="Creadores de INMUNO LAB">
+      <div class="creator-panel-top">
+        <span class="creator-label">✦ PROYECTO ACADÉMICO</span>
+        <span class="creator-pill">Cuatro integrantes · una misma misión</span>
+      </div>
+      <div class="creator-grid">
+        <div class="creator-person"><span class="creator-avatar" aria-hidden="true">DQ</span><div><strong>Daniela Quijano</strong><small>Equipo creador</small></div></div>
+        <div class="creator-person"><span class="creator-avatar" aria-hidden="true">VP</span><div><strong>Valeria Pozo</strong><small>Equipo creador</small></div></div>
+        <div class="creator-person"><span class="creator-avatar" aria-hidden="true">JR</span><div><strong>Javier Romero</strong><small>Equipo creador</small></div></div>
+        <div class="creator-person"><span class="creator-avatar" aria-hidden="true">ES</span><div><strong>Edgar Sáenz</strong><small>Equipo creador</small></div></div>
+      </div>
+      <p class="creator-footnote">Diseño y contenidos con fines educativos. INMUNO•LAB es un proyecto independiente y no está afiliado oficialmente a las organizaciones citadas.</p>
+    </div>
+    <div class="directory-panel" aria-labelledby="directory-title">
+      <div class="directory-mark" aria-hidden="true">✚</div>
+      <div class="directory-info">
+        <div class="directory-kicker">ACCESO RÁPIDO · MÉXICO</div>
+        <h2 id="directory-title">¿Buscas un inmunólogo?</h2>
+        <p>Consulta directorios de organizaciones especializadas para localizar médicos en México. Revisa su ubicación, disponibilidad y certificación antes de programar una cita.</p>
+        <div class="directory-buttons">
+          <a class="directory-button primary" href="https://fumeni.org.mx/encuentra-un-inmunologo/" target="_blank" rel="noopener noreferrer"><span>Directorio de inmunólogos · FUMENI</span><span aria-hidden="true">↗</span></a>
+          <a class="directory-button secondary" href="https://www.conica.org.mx/" target="_blank" rel="noopener noreferrer"><span>Buscar especialistas certificados · CONICA</span><span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="directory-small">Enlaces a sitios externos. INMUNO•LAB no gestiona citas ni garantiza que todos los datos de contacto estén actualizados.</p>
+      </div>
+    </div>
+    <div class="home-trust"><div class="trust-mark">✦</div><div><strong>Rigor científico explicado con claridad.</strong><p>Proyecto educativo independiente, elaborado a partir de fuentes médicas y materiales de organizaciones dedicadas a los errores innatos de la inmunidad. Sin afiliación oficial.</p></div><button class="plain-arrow" data-nav="recursos">Ver fuentes ↗</button></div>
   </div>
 </section>
 <section class="panel" id="panel-estudiantes"><div class="wrap persona-page persona-student">
