@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoVIH | Salud, Prevención y Apoyo Comunitario</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            800: '#115e59',
+                            900: '#134e4a',
+                            dark: '#0f172a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Lucide-like icons via CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #115e59 100%);
+        }
+        .card-dark {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- Navegación -->
+    <header class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-red-500 text-white p-2 rounded-xl">
+                    <i class="fa-solid fa-ribbon text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-bold text-white tracking-wide">Info<span class="text-teal-400">VIH</span></span>
+                    <span class="hidden sm:inline-block text-xs bg-teal-900/60 text-teal-300 px-2 py-0.5 rounded-full ml-2">Información Clara y Segura</span>
+                </div>
+            </div>
+
+            <!-- Navegación Escritorio -->
+            <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="#conceptos" class="text-slate-300 hover:text-teal-400 transition">¿Qué es el VIH?</a>
+                <a href="#evaluador" class="text-slate-300 hover:text-teal-400 transition">Evaluador de Riesgo</a>
+                <a href="#protocolo" class="text-slate-300 hover:text-teal-400 transition">¿Qué hacer si sospecho?</a>
+                <a href="#prevencion" class="text-slate-300 hover:text-teal-400 transition">Prevención e I=I</a>
+                <a href="#directorio" class="text-slate-300 hover:text-teal-400 transition">Atención y Apoyo</a>
+            </nav>
+
+            <!-- Botón de Emergencia 72h -->
+            <a href="#protocolo" class="bg-red-600 hover:bg-red-700 text-white font-bold text-xs sm:text-sm px-4 py-2 rounded-lg shadow-lg flex items-center space-x-2 transition animate-pulse">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <span>¿Exposición reciente? (PEP)</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero / Presentación -->
+    <section class="gradient-bg text-white py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+        <div class="max-w-4xl mx-auto text-center space-y-6">
+            <span class="bg-teal-500/20 text-teal-300 border border-teal-500/30 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase">
+                Acompañamiento sin estigmas
+            </span>
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-white leading-tight">
+                Información clara, acompañamiento humano y sin rodeos sobre el VIH
+            </h1>
+            <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto">
+                Aprende sin tecnicismos complejos. Evalúa tus dudas con confidencialidad, conoce tus derechos de atención y descubre cómo vivir una vida plena y saludable.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 pt-4">
+                <a href="#protocolo" class="bg-teal-600 hover:bg-teal-500 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition">
+                    Pasos a seguir si tienes dudas
+                </a>
+                <a href="#evaluador" class="bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 font-semibold px-6 py-3 rounded-lg transition">
+                    Calcular mi riesgo de exposición
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 1: Conceptos Claros (Con Analogías) -->
+    <section id="conceptos" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white">Entendiendo el VIH sin palabras difíciles</h2>
+            <p class="text-slate-400 mt-2">Respuestas sencillas a las preguntas más comunes</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Tarjeta 1: VIH vs SIDA -->
+            <div class="card-dark p-6 rounded-2xl space-y-4">
+                <div class="w-12 h-12 bg-teal-500/20 text-teal-400 rounded-xl flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white">¿Cuál es la diferencia entre VIH y SIDA?</h3>
+                <p class="text-slate-300 leading-relaxed">
+                    Imagina que tu cuerpo es una casa protegida por <strong class="text-teal-300">guardias de seguridad</strong> (tus defensas, llamadas células CD4).
+                </p>
+                <ul class="space-y-2 text-sm text-slate-300">
+                    <li class="flex items-start space-x-2">
+                        <i class="fa-solid fa-circle-check text-teal-400 mt-1"></i>
+                        <span><strong class="text-white">VIH:</strong> Es el virus que entra a la casa e intenta distraer a los guardias. Si se detecta a tiempo y se toma tratamiento, los guardias recuperan el control y no pasa nada más.</span>
+                    </li>
+                    <li class="flex items-start space-x-2">
+                        <i class="fa-solid fa-circle-check text-teal-400 mt-1"></i>
+                        <span><strong class="text-white">SIDA:</strong> Es la etapa avanzada de la infección, cuando las defensas están muy afectadas o aparecen ciertas enfermedades oportunistas. El tratamiento oportuno puede prevenir su aparición.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Tarjeta 2: Carga Viral y Pruebas -->
+            <div class="card-dark p-6 rounded-2xl space-y-4">
+                <div class="w-12 h-12 bg-indigo-500/20 text-indigo-400 rounded-xl flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white">¿Cómo funcionan las medicinas actuales?</h3>
+                <p class="text-slate-300 leading-relaxed">
+                    Las pastillas modernas (Tratamiento Antirretroviral o TAR) le ponen una <strong class="text-indigo-300">"caja fuerte"</strong> al virus.
+                </p>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                    El virus permanece en el cuerpo, pero el tratamiento impide que se multiplique de forma eficaz y puede hacer que la carga viral sea <strong class="text-white">indetectable</strong>. Mantener una carga viral indetectable con tratamiento y controles permite cuidar la salud y <strong class="text-teal-300">evita la transmisión sexual del VIH (I=I)</strong>.
+                </p>
+            </div>
+        </div>
+
+        <!-- Mitos e Historias Reales -->
+        <div class="mt-12 bg-slate-800/60 rounded-2xl p-6 sm:p-8 border border-slate-700">
+            <h3 class="text-xl font-bold text-white mb-6 text-center">Desmintiendo Mitos Frecuentes</h3>
+            <div class="grid sm:grid-cols-3 gap-6">
+                <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+                    <div class="text-red-400 font-bold text-sm mb-1"><i class="fa-solid fa-xmark"></i> MITO</div>
+                    <p class="text-xs text-slate-400 mb-2">"El VIH se transmite por picaduras de mosquitos o abrazos."</p>
+                    <div class="text-teal-400 font-bold text-sm mb-1"><i class="fa-solid fa-check"></i> VERDAD</div>
+                    <p class="text-xs text-slate-300">El virus solo vive dentro de fluidos humanos específicos. Saliva, lágrimas, sudor o picaduras NO lo transmiten.</p>
+                </div>
+                <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+                    <div class="text-red-400 font-bold text-sm mb-1"><i class="fa-solid fa-xmark"></i> MITO</div>
+                    <p class="text-xs text-slate-400 mb-2">"Tener VIH significa que tu esperanza de vida disminuye."</p>
+                    <div class="text-teal-400 font-bold text-sm mb-1"><i class="fa-solid fa-check"></i> VERDAD</div>
+                    <p class="text-xs text-slate-300">Con tratamiento antirretroviral y seguimiento, muchas personas con VIH pueden vivir una vida larga y saludable. El tratamiento varía según cada caso.</p>
+                </div>
+                <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+                    <div class="text-red-400 font-bold text-sm mb-1"><i class="fa-solid fa-xmark"></i> MITO</div>
+                    <p class="text-xs text-slate-400 mb-2">"Una persona con VIH no puede tener hijos sanos."</p>
+                    <div class="text-teal-400 font-bold text-sm mb-1"><i class="fa-solid fa-check"></i> VERDAD</div>
+                    <p class="text-xs text-slate-300">Con tratamiento y seguimiento durante el embarazo, parto y cuidados del bebé, el riesgo de transmisión puede ser menor del 1%, aunque no es cero.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 2: Evaluador de Riesgo -->
+    <section id="evaluador" class="py-16 bg-slate-950 px-4 sm:px-6 lg:px-8 border-y border-slate-800">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-10">
+                <span class="text-teal-400 text-xs font-bold tracking-widest uppercase">Calculadora Informativa</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Evaluador de Riesgo de Exposición</h2>
+                <p class="text-slate-400 text-sm mt-2">Herramienta educativa orientativa: no ofrece diagnósticos ni porcentajes de riesgo. Los datos se procesan en tu navegador y no se envían a un servidor.</p>
+            </div>
+
+            <div class="card-dark p-6 sm:p-8 rounded-2xl shadow-xl space-y-6">
+                <!-- Pregunta 1 -->
+                <div>
+                    <label class="block text-sm font-semibold text-white mb-2">1. ¿Qué tipo de práctica o contacto tuviste?</label>
+                    <select id="tipoContacto" class="w-full bg-slate-900 border border-slate-700 text-slate-200 rounded-lg p-3 text-sm focus:border-teal-500 focus:outline-none">
+                        <option value="bajo">Sexo oral, besos, caricias o masturbación mutua</option>
+                        <option value="alto">Relación sexual vaginal o anal con penetración</option>
+                        <option value="sangre">Uso compartido de agujas o contacto directo con sangre en herida abierta</option>
+                    </select>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div>
+                    <label class="block text-sm font-semibold text-white mb-2">2. ¿Se utilizó preservativo (condón) correctamente durante todo el evento?</label>
+                    <select id="usoCondon" class="w-full bg-slate-900 border border-slate-700 text-slate-200 rounded-lg p-3 text-sm focus:border-teal-500 focus:outline-none">
+                        <option value="si">Sí, se usó de principio a fin sin roturas ni deslizamientos</option>
+                        <option value="no">No se usó, se rompió o se salió durante el acto</option>
+                    </select>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div>
+                    <label class="block text-sm font-semibold text-white mb-2">3. ¿Conoces el estado de salud o carga viral de la otra persona?</label>
+                    <select id="estadoPareja" class="w-full bg-slate-900 border border-slate-700 text-slate-200 rounded-lg p-3 text-sm focus:border-teal-500 focus:outline-none">
+                        <option value="indetectable">Tiene VIH pero toma su tratamiento y está INDETECTABLE</option>
+                        <option value="desconocido">No lo sé / No conozco su estado</option>
+                        <option value="detectable">Tiene VIH y no toma tratamiento o su carga viral es detectable</option>
+                    </select>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div>
+                    <label class="block text-sm font-semibold text-white mb-2">4. ¿Tomas actualmente PrEP (Prevención Pre-Exposición)?</label>
+                    <select id="usaPrep" class="w-full bg-slate-900 border border-slate-700 text-slate-200 rounded-lg p-3 text-sm focus:border-teal-500 focus:outline-none">
+                        <option value="no">No tomo PrEP</option>
+                        <option value="si">Sí, tomo PrEP diaria con buena adherencia</option>
+                    </select>
+                </div>
+
+                <button onclick="calcularRiesgo()" class="w-full bg-teal-600 hover:bg-teal-500 text-white font-bold py-3 rounded-lg transition text-sm">
+                    Evaluar mi situación
+                </button>
+
+                <!-- Resultado -->
+                <div id="resultadoRiesgo" class="hidden p-6 rounded-xl border space-y-3 mt-4">
+                    <h4 id="tituloResultado" class="text-lg font-bold"></h4>
+                    <p id="descripcionResultado" class="text-sm leading-relaxed text-slate-200"></p>
+                    <div id="recomendacionResultado" class="text-xs bg-slate-900/80 p-3 rounded-lg border border-slate-800 text-slate-300"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 3: Protocolo y Pasos a Seguir (Sospecha o Diagnóstico) -->
+    <section id="protocolo" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="bg-red-500/20 text-red-400 border border-red-500/30 px-3 py-1 rounded-full text-xs font-semibold uppercase">
+                Guía de Actuación Paso a Paso
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white mt-3">¿Qué hacer ante una sospecha o un resultado positivo?</h2>
+            <p class="text-slate-400 mt-2 text-sm">Mantén la calma. Hoy en día existen caminos muy claros y efectivos para proteger tu salud.</p>
+        </div>
+
+        <!-- Módulo Urgente 72 Horas (PEP) -->
+        <div class="bg-gradient-to-r from-red-950 via-slate-900 to-slate-900 border-2 border-red-600/60 p-6 sm:p-8 rounded-2xl mb-12 shadow-2xl">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                <div class="space-y-3">
+                    <div class="inline-flex items-center space-x-2 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold">
+                        <i class="fa-solid fa-clock"></i>
+                        <span>EMERGENCIA POST-EXPOSICIÓN (PEP)</span>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white">¿Tuviste una exposición de riesgo en las últimas 72 horas?</h3>
+                    <p class="text-slate-300 text-sm max-w-2xl">
+                        Existe un tratamiento de emergencia llamado <strong class="text-white">PEP (Profilaxis Post-Exposición)</strong>. La PEP debe iniciarse <strong>lo antes posible, idealmente dentro de 24 horas y no después de 72 horas</strong>. Dura 28 días y reduce el riesgo, pero no ofrece protección absoluta.
+                    </p>
+                </div>
+                
+                <!-- Calculadora de Horas PEP -->
+                <div class="bg-slate-900 p-5 rounded-xl border border-red-900/50 w-full md:w-80 text-center space-y-3">
+                    <label class="block text-xs font-bold text-red-400 uppercase">Calcula tu ventana de PEP</label>
+                    <input type="datetime-local" id="fechaContacto" class="w-full bg-slate-800 border border-slate-700 text-white rounded p-2 text-xs">
+                    <button onclick="calcularPEP()" class="w-full bg-red-600 hover:bg-red-500 text-white text-xs font-bold py-2 rounded transition">
+                        Verificar tiempo restante
+                    </button>
+                    <div id="resultadoPEP" class="text-xs font-bold text-slate-300 min-h-[20px]"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ruta Visual de Pasos a Seguir -->
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Paso 1 -->
+            <div class="card-dark p-6 rounded-2xl space-y-3 border-t-4 border-teal-500">
+                <span class="text-teal-400 font-black text-2xl">01</span>
+                <h3 class="text-lg font-bold text-white">Realízate una prueba de detección</h3>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                    Las pruebas rápidas de gota de sangre en el dedo tardan solo 20 minutos y son gratuitas en centros comunitarios y hospitales.
+                </p>
+                <div class="text-xs bg-slate-900 p-3 rounded border border-slate-800 text-slate-400">
+                    <strong class="text-slate-200">Recuerda el Periodo Ventana:</strong> La ventana varía: prueba de antígeno/anticuerpo de laboratorio en sangre venosa (18–45 días); rápida de dedo (18–90); de anticuerpos (23–90); NAT (10–33). Pregunta cuándo repetirla.
+                </div>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="card-dark p-6 rounded-2xl space-y-3 border-t-4 border-indigo-500">
+                <span class="text-indigo-400 font-black text-2xl">02</span>
+                <h3 class="text-lg font-bold text-white">Si el resultado es "No Reactivo" (Negativo)</h3>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                    Significa que no se encontraron anticuerpos. Aprovecha para explorar opciones de prevención continua como el uso de condón o <strong class="text-indigo-300">PrEP</strong> (una pastilla diaria que previene la infección antes de exponerse).
+                </p>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="card-dark p-6 rounded-2xl space-y-3 border-t-4 border-amber-500">
+                <span class="text-amber-400 font-black text-2xl">03</span>
+                <h3 class="text-lg font-bold text-white">Si el resultado es "Reactivo" (Positivo)</h3>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                    Respira profundo: <strong class="text-white">el VIH no es una sentencia</strong>, es una condición de salud manejable.
+                </p>
+                <ul class="text-xs text-slate-300 space-y-2 list-disc list-inside">
+                    <li>Acude a un centro de salud para la prueba de confirmación.</li>
+                    <li>Inicia tu Tratamiento Antirretroviral (TAR) gratuito.</li>
+                    <li>Con tratamiento y seguimiento podrás reducir tu carga viral; el tiempo para alcanzar la indetectabilidad varía.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 4: Prevención Integrada (PrEP, PEP e I=I) -->
+    <section id="prevencion" class="py-16 bg-slate-950 px-4 sm:px-6 lg:px-8 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto space-y-12">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white">Tus opciones de prevención modernas</h2>
+                <p class="text-slate-400 text-sm mt-2">Hoy disponemos de múltiples herramientas para cuidar de ti y de tus parejas sexuales.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- PrEP -->
+                <div class="card-dark p-6 rounded-2xl space-y-3">
+                    <div class="text-teal-400 text-2xl"><i class="fa-solid fa-capsules"></i></div>
+                    <h3 class="text-xl font-bold text-white">PrEP (Antes)</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Es una medicina que toman personas que no tienen VIH pero desean prevenirlo. Al tomarla todos los días, crea un "escudo" en el cuerpo que evita que el virus se aloje si entras en contacto con él.
+                    </p>
+                </div>
+
+                <!-- PEP -->
+                <div class="card-dark p-6 rounded-2xl space-y-3">
+                    <div class="text-red-400 text-2xl"><i class="fa-solid fa-kit-medical"></i></div>
+                    <h3 class="text-xl font-bold text-white">PEP (Después)</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Tratamiento de emergencia durante 28 días para cuando ocurri
+                        ó un accidente (rotura de condón, agresión o exposición imprevista) dentro de las primeras 72 horas.
+                    </p>
+                </div>
+
+                <!-- I=I -->
+                <div class="card-dark p-6 rounded-2xl space-y-3">
+                    <div class="text-emerald-400 text-2xl"><i class="fa-solid fa-infinity"></i></div>
+                    <h3 class="text-xl font-bold text-white">I = I (Indetectable es Intransmisible)</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Demostrado científicamente: Una persona con VIH en tratamiento que mantiene su carga viral indetectable por más de 6 meses <strong class="text-emerald-300">NO transmite el virus sexualmente</strong> a nadie.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 5: Directorio de Atención y Salud Integral -->
+    <section id="directorio" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white">Dónde encontrar atención médica y apoyo</h2>
+            <p class="text-slate-400 mt-2 text-sm">El acceso a la prueba y al tratamiento es un derecho gratuito en las instituciones públicas.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Centros de Atención en México -->
+            <div class="card-dark p-6 rounded-2xl space-y-4">
+                <h3 class="text-xl font-bold text-white flex items-center space-x-2">
+                    <i class="fa-solid fa-hospital text-teal-400"></i>
+                    <span>Centros Especializados (México)</span>
+                </h3>
+                <div class="space-y-3 text-xs text-slate-300">
+                    <div class="p-3 bg-slate-900 rounded-lg border border-slate-800">
+                        <strong class="text-white block text-sm">CAPASITS / CENSIDA</strong>
+                        <p class="mt-1">Centros Ambulatorios de Prevención y Atención en SIDA e ITS. Brindan atención médica, psicológica y medicamentos gratuitos sin importar si tienes seguro social.</p>
+                    </div>
+                    <div class="p-3 bg-slate-900 rounded-lg border border-slate-800">
+                        <strong class="text-white block text-sm">IMSS e ISSSTE</strong>
+                        <p class="mt-1">Ofrecen clínica especializada, estudios de laboratorio de seguimiento y medicinas sin costo para sus derechohabientes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Apoyo Emocional y Líneas Gratuitas -->
+            <div class="card-dark p-6 rounded-2xl space-y-4">
+                <h3 class="text-xl font-bold text-white flex items-center space-x-2">
+                    <i class="fa-solid fa-phone-volume text-indigo-400"></i>
+                    <span>Líneas Telefónicas Gratuitas</span>
+                </h3>
+                <div class="space-y-3 text-xs text-slate-300">
+                    <div class="p-3 bg-slate-900 rounded-lg border border-slate-800 flex justify-between items-center">
+                        <div>
+                            <strong class="text-white block text-sm">Línea CENSIDA</strong>
+                            <p class="text-slate-400">Orientación médica y ubicación de clínicas</p>
+                        </div>
+                        <span class="bg-teal-500/20 text-teal-300 font-bold px-3 py-1 rounded text-xs">55 1946 9772</span>
+                    </div>
+                    <div class="p-3 bg-slate-900 rounded-lg border border-slate-800 flex justify-between items-center">
+                        <div>
+                            <strong class="text-white block text-sm">Línea de la Vida</strong>
+                            <p class="text-slate-400">Apoyo psicológico y salud mental 24/7</p>
+                        </div>
+                        <span class="bg-indigo-500/20 text-indigo-300 font-bold px-3 py-1 rounded text-xs">800 911 2000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-auto bg-slate-950 border-t border-slate-800 py-8 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 space-y-3">
+            <p class="text-slate-400">InfoVIH — Plataforma Educativa e Informativa de Salud Pública</p>
+            <p>La información contenida en esta web tiene carácter exclusivamente orientativo e informativo y no sustituye la consulta médica profesional.</p>
+            <p>Fuentes: <a href="https://www.cdc.gov/hivnexus/hcp/pep/" target="_blank" rel="noopener noreferrer">CDC PEP</a> · <a href="https://www.cdc.gov/hivpartners/php/hiv-testing/index.html" target="_blank" rel="noopener noreferrer">CDC Pruebas</a> · <a href="https://www.cdc.gov/global-hiv-tb/php/our-approach/undetectable-untransmittable.html" target="_blank" rel="noopener noreferrer">CDC I=I</a></p><p>&copy; 2026 Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Lógica de Interactividad en JS -->
+    <script>
+        // Lógica del Evaluador de Riesgo
+        function calcularRiesgo() {
+            const contacto = document.getElementById('tipoContacto').value;
+            const condon = document.getElementById('usoCondon').value;
+            const pareja = document.getElementById('estadoPareja').value;
+            const prep = document.getElementById('usaPrep').value;
+
+            const contenedor = document.getElementById('resultadoRiesgo');
+            const titulo = document.getElementById('tituloResultado');
+            const desc = document.getElementById('descripcionResultado');
+            const rec = document.getElementById('recomendacionResultado');
+
+            contenedor.classList.remove('hidden', 'border-green-500', 'border-amber-500', 'border-red-500', 'bg-green-950/40', 'bg-amber-950/40', 'bg-red-950/40');
+
+            // Escenario de Riesgo Mínimo / Nulo
+            if (contacto === 'bajo' || (contacto === 'alto' && (condon === 'si' || pareja === 'indetectable' || prep === 'si'))) {
+                contenedor.classList.add('border-green-500', 'bg-green-950/40');
+                titulo.innerText = "Orientación: riesgo potencialmente reducido";
+                titulo.className = "text-lg font-bold text-green-400";
+                desc.innerText = "El uso adecuado de barreras o PrEP reduce el riesgo. Si una pareja con VIH mantiene carga viral indetectable, no transmite VIH por vía sexual. El sexo oral tiene un riesgo muy bajo. Esta herramienta no descarta una infección ni sustituye una evaluación médica.";
+                rec.innerHTML = "<strong>Sugerencia:</strong> Mantén tus revisiones periódicas de salud sexual y continúa protegiéndote según tus necesidades.";
+            } 
+            // Escenario de Riesgo Alto / Exposición
+            else if (contacto === 'alto' || contacto === 'sangre') {
+                contenedor.classList.add('border-red-500', 'bg-red-950/40');
+                titulo.innerText = "Riesgo Significativo de Exposición";
+                titulo.className = "text-lg font-bold text-red-400";
+                desc.innerText = "Hubo penetración sin condón ni PrEP con una pareja cuyo estado es desconocido o detectable, o bien hubo contacto directo con sangre.";
+                rec.innerHTML = "<strong>Paso Urgente:</strong> Si el evento ocurrió hace <strong>menos de 72 horas</strong>, acude inmediatamente a urgencias o a un centro de salud a solicitar <strong>PEP (Profilaxis Post-Exposición)</strong>. Si han pasado más de 72 horas, agenda una prueba de detección al cumplir el periodo ventana.";
+            }
+        }
+
+        // Lógica de Calculadora de Temporizador PEP
+        function calcularPEP() {
+            const fechaInput = document.getElementById('fechaContacto').value;
+            const resDiv = document.getElementById('resultadoPEP');
+
+            if (!fechaInput) {
+                resDiv.innerText = "Por favor selecciona una fecha y hora.";
+                resDiv.className = "text-xs font-bold text-amber-400";
+                return;
+            }
+
+            const fechaContacto = new Date(fechaInput);
+            const ahora = new Date();
+            const diferenciaHoras = (ahora - fechaContacto) / (1000 * 60 * 60);
+
+            if (diferenciaHoras < 0) {
+                resDiv.innerText = "La fecha no puede ser futura.";
+                resDiv.className = "text-xs font-bold text-amber-400";
+            } else if (diferenciaHoras <= 72) {
+                const horasRestantes = Math.floor(72 - diferenciaHoras);
+                resDiv.innerText = `Acude a urgencias AHORA si hubo una exposición. Restan aprox. ${horasRestantes} horas del plazo máximo para valorar PEP.`;
+                resDiv.className = "text-xs font-bold text-green-400";
+            } else {
+                resDiv.innerText = "Han transcurrido más de 72 horas. La PEP normalmente no se recomienda después de ese plazo: acude para una evaluación y plan de pruebas.";
+                resDiv.className = "text-xs font-bold text-red-400";
+            }
+        }
+    </script>
+</body>
+</html>
